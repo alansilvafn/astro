@@ -1,0 +1,15 @@
+header {
+  border-bottom: 1px solid white;
+
+  .navbar {
+    padding: 2rem 0;
+  }
+
+  .navigation__actions {
+    margin-left: auto;
+
+    a {
+      padding: 0 1rem !important;
+    }
+  }
+}

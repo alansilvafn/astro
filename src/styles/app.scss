@@ -1,0 +1,65 @@
+@import './variables.scss';
+@import './buttons.scss';
+
+//Fonts
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./assets/fonts/inter-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./assets/fonts/inter-700.woff2') format('woff2');
+}
+
+// Overall
+body {
+  height: 100vh;
+  color: white;
+  font-family: 'Inter', sans-serif;
+
+  a {
+    color: $link !important;
+
+    &:hover {
+      color: $linkHover !important;
+    }
+  }
+  a.active {
+    color: white !important;
+  }
+}
+
+// Bg
+.bg-overlay {
+  height: 100vh;
+  width: 100%;
+  background: $gradient;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+
+  &::after {
+    content: '';
+    height: 100vh;
+    width: 25%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $bg_dark;
+    z-index: -1;
+  }
+}
+
+// Page
+.page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

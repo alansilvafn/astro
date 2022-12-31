@@ -1,0 +1,13 @@
+.button--login,
+.button--search {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  span {
+    color: white;
+  }
+}
+.button--search {
+  border-right: 1px solid rgba(white, 0.2);
+}
