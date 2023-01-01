@@ -1,13 +1,53 @@
-.button--login,
-.button--search {
+// Header
+.button-login,
+.button-search {
   display: flex;
   align-items: center;
   gap: 1rem;
+  @include transitions;
 
   span {
     color: white;
   }
+
+  &:hover {
+    gap: 0.5rem;
+    margin-left: 0.5rem;
+  }
 }
-.button--search {
-  border-right: 1px solid rgba(white, 0.2);
+
+// Slider
+.button-slider {
+  width: 2rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $bg_button;
+  @include transitions;
+
+  .button-icon {
+    font-size: 1.5rem;
+    color: white;
+  }
+
+  &:hover {
+    background-color: $grey;
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.button-slider--left {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.button-slider--right {
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
 }

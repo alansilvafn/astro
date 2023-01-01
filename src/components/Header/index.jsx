@@ -1,13 +1,9 @@
-import astroLogo from '../../assets/images/logo.svg'
-
+import './style.scss'
 import Container from 'react-bootstrap/Container'
-import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
-
 import { FaSearch } from 'react-icons/fa'
 import { FaSignInAlt } from 'react-icons/fa'
-
-import './style.scss'
+import astroLogo from '../../assets/images/logo.svg'
 
 function Header() {
   return (
@@ -16,34 +12,52 @@ function Header() {
         <Container>
           <div className="navigation__brand">
             <a href="#">
-              <img src={astroLogo} width={260} height={56} alt="Astro" />
+              <img src={astroLogo} width={200} height={43} alt="Astro" />
             </a>
             <Navbar.Toggle aria-controls="navigation__collapse" />
           </div>
           <Navbar.Collapse id="navigation__collapse">
-            <Nav className="ms-auto">
-              <Nav.Link href="#">Home</Nav.Link>
-              <Nav.Link href="#" className="active">
-                Astro
-              </Nav.Link>
-              <Nav.Link href="#">Customize</Nav.Link>
-              <Nav.Link href="#">Technology</Nav.Link>
-              <Nav.Link href="#">Kits</Nav.Link>
-            </Nav>
-            <Nav className="navigation__actions">
-              <Nav.Link href="#" className="button button--search">
-                <div className="button__icon">
-                  <FaSearch></FaSearch>
-                </div>
-                <span>Search</span>
-              </Nav.Link>
-              <Nav.Link href="#" className="button button--login">
-                <span>Login</span>
-                <div className="button__icon">
-                  <FaSignInAlt></FaSignInAlt>
-                </div>
-              </Nav.Link>
-            </Nav>
+            <ul className="navigation__list navigation__list--main">
+              <li className="navigation__item">
+                <a href="#" className="navigation__link">
+                  Home
+                </a>
+              </li>
+              <li className="navigation__item">
+                <a href="#" className="navigation__link active">
+                  Astro
+                </a>
+              </li>
+              <li className="navigation__item">
+                <a href="#" className="navigation__link">
+                  Customize
+                </a>
+              </li>
+              <li className="navigation__item">
+                <a href="#" className="navigation__link">
+                  Technology
+                </a>
+              </li>
+              <li className="navigation__item">
+                <a href="#" className="navigation__link">
+                  Kits
+                </a>
+              </li>
+            </ul>
+            <ul className="navigation__list navigation__list--actions">
+              <li className="navigation__item">
+                <a href="#" className="button-search">
+                  <FaSearch className="button-icon"></FaSearch>
+                  <span>Search</span>
+                </a>
+              </li>
+              <li className="navigation__item">
+                <a href="#" className="button-login">
+                  <span>Login</span>
+                  <FaSignInAlt className="button-icon"></FaSignInAlt>
+                </a>
+              </li>
+            </ul>
           </Navbar.Collapse>
         </Container>
       </Navbar>

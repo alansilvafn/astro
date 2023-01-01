@@ -1,15 +1,23 @@
 header {
   border-bottom: 1px solid white;
 
-  .navbar {
+  .navigation {
     padding: 2rem 0;
-  }
 
-  .navigation__actions {
-    margin-left: auto;
+    &__list {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+    }
 
-    a {
-      padding: 0 1rem !important;
+    &__list--main {
+      gap: 1.5rem;
+    }
+
+    &__list--actions li:first-child {
+      padding-right: 1.5rem;
+      margin-right: 1.5rem;
+      border-right: 1px solid rgba(white, 0.2);
     }
   }
 }

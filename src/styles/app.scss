@@ -23,15 +23,22 @@ body {
   color: white;
   font-family: 'Inter', sans-serif;
 
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
   a {
-    color: $link !important;
+    color: $grey;
+    text-decoration: none;
 
     &:hover {
-      color: $linkHover !important;
+      color: white;
     }
   }
   a.active {
-    color: white !important;
+    color: white;
   }
 }
 
