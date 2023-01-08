@@ -12,7 +12,6 @@ import product2 from '../../assets/images/product/product_2.png'
 import product3 from '../../assets/images/product/product_3.png'
 import product4 from '../../assets/images/product/product_4.png'
 import product5 from '../../assets/images/product/product_5.png'
-import product6 from '../../assets/images/product/product_6.png'
 
 function Product() {
   return (
@@ -45,7 +44,7 @@ function Product() {
             <div className="product__slider">
               <Carousel
                 slide={false}
-                indicators={false}
+                indicators={true}
                 prevIcon={
                   <span aria-hidden="true" className="button-slider button-slider--left">
                     <FaAngleLeft className="button-icon"></FaAngleLeft>
@@ -58,22 +57,19 @@ function Product() {
                 }
               >
                 <Carousel.Item>
-                  <img className="product__img" src={product1} alt="Product 1" />
+                  <div className="product__img" style={{ backgroundImage: `url(${product1})` }}></div>
                 </Carousel.Item>
                 <Carousel.Item>
-                  <img className="product__img" src={product2} alt="Product 2" />
+                  <div className="product__img" style={{ backgroundImage: `url(${product2})` }}></div>
                 </Carousel.Item>
                 <Carousel.Item>
-                  <img className="product__img" src={product3} alt="Product 3" />
+                  <div className="product__img" style={{ backgroundImage: `url(${product3})` }}></div>
                 </Carousel.Item>
                 <Carousel.Item>
-                  <img className="product__img" src={product4} alt="Product 4" />
+                  <div className="product__img" style={{ backgroundImage: `url(${product4})` }}></div>
                 </Carousel.Item>
                 <Carousel.Item>
-                  <img className="product__img" src={product5} alt="Product 5" />
-                </Carousel.Item>
-                <Carousel.Item>
-                  <img className="product__img" src={product6} alt="Product 6" />
+                  <div className="product__img" style={{ backgroundImage: `url(${product5})` }}></div>
                 </Carousel.Item>
               </Carousel>
             </div>
