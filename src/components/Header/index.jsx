@@ -39,7 +39,7 @@ function Header() {
                 </a>
               </li>
               <li className="navigation__item">
-                <a href="#" className="navigation__link">
+                <a href="#" className="navigation__link navigation__link--featured">
                   Kits
                 </a>
               </li>
@@ -47,8 +47,8 @@ function Header() {
             <ul className="navigation__list navigation__list--actions">
               <li className="navigation__item">
                 <a href="#" className="button-search">
-                  <FaSearch className="button-icon"></FaSearch>
                   <span>Search</span>
+                  <FaSearch className="button-icon"></FaSearch>
                 </a>
               </li>
               <li className="navigation__item">

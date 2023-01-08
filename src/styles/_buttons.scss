@@ -23,16 +23,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: $bg_button;
+  border: 1px solid rgba(white, 0.1);
+  background-color: rgba(white, 0.1);
   @include transitions;
 
   .button-icon {
     font-size: 1.5rem;
     color: white;
+    @include transitions;
   }
 
   &:hover {
-    background-color: $grey;
+    background-color: rgba(white, 0.2);
+
+    .button-icon {
+      transform: scale(1.1);
+    }
   }
 
   &:active {

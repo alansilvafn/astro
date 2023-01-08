@@ -41,12 +41,13 @@
       &-control-next,
       &-control-prev {
         width: initial;
+        opacity: 1;
       }
     }
   }
 
   &__img {
-    height: 500px;
+    height: 400px;
     width: calc(100% - 6rem);
     margin: 0 auto;
     background-size: contain;
