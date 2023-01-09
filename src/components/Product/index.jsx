@@ -6,6 +6,8 @@ import Carousel from 'react-bootstrap/Carousel'
 
 import { FaAngleLeft } from 'react-icons/fa'
 import { FaAngleRight } from 'react-icons/fa'
+import { FaStar } from 'react-icons/fa'
+import { FaShoppingCart } from 'react-icons/fa'
 
 import product1 from '../../assets/images/product/product_1.png'
 import product2 from '../../assets/images/product/product_2.png'
@@ -20,22 +22,54 @@ function Product() {
         <Row>
           <Col xs={12} md={5}>
             <div className="product__info">
-              <div className="product__breadcrumb"></div>
-              <div className="product__name">
+              <ul className="product__breadcrumb breadcrumb">
+                <li className="breadcrumb__item">
+                  <a href="#" className="breadcrumb__link">
+                    Producs
+                  </a>
+                </li>
+                <li className="breadcrumb__item">
+                  <a href="#" className="breadcrumb__link">
+                    Astro
+                  </a>
+                </li>
+                <li className="breadcrumb__item">
+                  <a href="#" className="breadcrumb__link">
+                    Dark Series
+                  </a>
+                </li>
+              </ul>
+              <div className="product__detail">
                 <h2 className="product__serie">Dark series</h2>
-                <h1>Astro A30</h1>
+                <h1 className="product__name">Astro A30</h1>
               </div>
               <p className="product__description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae arcu vestibulum, consectetur quam eu, lacinia est. Donec diam sem, dignissim ut dictum quis, tristique et justo.
               </p>
               <div className="product__reviews">
-                <div className="product__rating"></div>
+                <ul className="product__rating rating">
+                  <li className="rating__item">
+                    <FaStar className="rating__star active"></FaStar>
+                  </li>
+                  <li className="rating__item">
+                    <FaStar className="rating__star active"></FaStar>
+                  </li>
+                  <li className="rating__item">
+                    <FaStar className="rating__star active"></FaStar>
+                  </li>
+                  <li className="rating__item">
+                    <FaStar className="rating__star active"></FaStar>
+                  </li>
+                  <li className="rating__item">
+                    <FaStar className="rating__star"></FaStar>
+                  </li>
+                </ul>
                 <span>1566+ Reviews</span>
               </div>
               <div className="product__add">
                 <span className="product__price">249,99€</span>
-                <button type="button" className="button button-card">
-                  Add to cart
+                <button type="button" className="button button-add">
+                  <FaShoppingCart className="icon"></FaShoppingCart> Add to cart
                 </button>
               </div>
             </div>

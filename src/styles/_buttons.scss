@@ -57,3 +57,21 @@
   border-bottom-right-radius: 1rem;
   border-bottom-left-radius: 1rem;
 }
+
+.button-add {
+  background-color: $bg_button;
+  color: white;
+  border-radius: 30px;
+  padding: 0.875rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  .icon {
+    @include transitions;
+  }
+
+  &:active .icon {
+    transform: scale(0.5);
+  }
+}

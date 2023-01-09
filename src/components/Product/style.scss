@@ -3,12 +3,78 @@
 .product {
   margin: auto 0;
 
+  .breadcrumb {
+    display: flex;
+    margin-bottom: 2rem;
+
+    &__item {
+      display: flex;
+      align-items: center;
+
+      &:not(:last-child):after {
+        content: '';
+        height: 0.25rem;
+        width: 0.25rem;
+        display: block;
+        margin: 0 0.5rem;
+        border-radius: 50%;
+        background-color: $grey;
+      }
+    }
+
+    &__link {
+      font-weight: 400;
+      font-size: 0.875rem;
+    }
+  }
+
   &__info {
     padding: 3rem 0;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+
+  &__serie {
+    font-size: 1.5rem;
+  }
+  &__name {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  &__description {
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    color: $grey;
+  }
+
+  &__reviews {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+  .rating {
+    display: flex;
+    gap: 1rem;
+
+    &__star {
+      opacity: 0.5;
+    }
+    &__star.active {
+      opacity: 1;
+    }
+  }
+
+  &__price {
+    font-size: 2.5rem;
+  }
+
+  &__add {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
   }
 
   &__slider {
