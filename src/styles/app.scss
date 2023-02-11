@@ -8,21 +8,23 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('./assets/fonts/inter-400.woff2') format('woff2');
+  src: url('../assets/fonts/inter-400.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url('./assets/fonts/inter-700.woff2') format('woff2');
+  src: url('../assets/fonts/inter-700.woff2') format('woff2');
 }
 
 // Overall
 body {
-  height: 100vh;
+  min-height: 100vh;
   color: white;
   font-family: 'Inter', sans-serif;
+  background-image: radial-gradient(circle farthest-corner at 0.5% 3%, rgba(98, 50, 122, 1) 0%, rgba(56, 0, 92, 1) 90.1%);
+  background-repeat: no-repeat;
 
   ul {
     list-style: none;
@@ -31,7 +33,7 @@ body {
   }
 
   a {
-    color: $grey;
+    color: rgba(white, 0.6);
     text-decoration: none;
 
     &:hover {
@@ -48,5 +50,4 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: black;
 }

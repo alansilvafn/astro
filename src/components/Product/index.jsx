@@ -19,7 +19,7 @@ function Product() {
   return (
     <div className="product">
       <Container>
-        <Row>
+        <Row className="product__row">
           <Col xs={12} md={5}>
             <div className="product__info">
               <ul className="product__breadcrumb breadcrumb">
@@ -46,8 +46,8 @@ function Product() {
               <p className="product__description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae arcu vestibulum, consectetur quam eu, lacinia est. Donec diam sem, dignissim ut dictum quis, tristique et justo.
               </p>
-              <div className="product__reviews">
-                <ul className="product__rating rating">
+              <div className="product__reviews reviews">
+                <ul className="reviews__rating rating">
                   <li className="rating__item">
                     <FaStar className="rating__star active"></FaStar>
                   </li>
@@ -64,7 +64,7 @@ function Product() {
                     <FaStar className="rating__star"></FaStar>
                   </li>
                 </ul>
-                <span>1566+ Reviews</span>
+                <span className="reviews__number">1566+ Reviews</span>
               </div>
               <div className="product__add">
                 <span className="product__price">249,99€</span>
@@ -74,7 +74,7 @@ function Product() {
               </div>
             </div>
           </Col>
-          <Col xs={12} md={{ span: 6, offset: 1 }}>
+          <Col xs={12} md={7}>
             <div className="product__slider">
               <Carousel
                 slide={false}

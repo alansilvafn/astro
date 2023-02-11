@@ -9,11 +9,13 @@
   span {
     color: white;
   }
+}
 
-  &:hover {
-    gap: 0.5rem;
-    margin-left: 0.5rem;
-  }
+.button-bag {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  @include transitions;
 }
 
 // Slider
@@ -66,12 +68,20 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  border: 0;
+  @include transitions;
 
   .icon {
     @include transitions;
   }
 
-  &:active .icon {
-    transform: scale(0.5);
+  &:hover {
+    background-color: rgba($bg_button, 0.8);
+  }
+
+  &:active {
+    .icon {
+      transform: scale(0.8);
+    }
   }
 }
