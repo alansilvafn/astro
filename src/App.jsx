@@ -10,7 +10,7 @@ import Product from './components/Product'
 function App() {
   return (
     <div className="App">
-      <div className="page" id="particles-js">
+      <div className="page">
         <Header></Header>
         <Product></Product>
       </div>
